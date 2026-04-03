@@ -1,0 +1,32 @@
+1.) Explain the advantages of Java?
+
+Object-Oriented Programming (OOP): Java supports OOP concepts to create modular and reusable code. 
+
+Platform Independence: Java programs can run on any operating system with a JVM.
+
+Multithreading and Concurrency: Java allows concurrent execution of multiple tasks for efficiency.
+
+Robust and Secure: Java ensures reliability and security through strong memory management and exception handling.
+
+Rich API and Standard Libraries: Java provides extensive built-in libraries for various programming needs.
+
+Open-Source Libraries: Java has a wide range of libraries to extend functionality and speed up development.
+
+Frameworks for Enterprise and Web Development: Java supports frameworks that simplify enterprise and web application development.
+
+Maintainability and Scalability: Java’s structured design allows easy maintenance and growth of applications.
+
+2.) Write a program to print "I am " in a seperate print statement and "good" in a seperate print statement but the output should be "I am good" in a single line.
+
+package assign;
+public class Assign {
+public static void main(String[] args) {
+System.out.print("I Am "); 
+System.out.print("Good");
+  }
+}
+
+
+
+
+
