@@ -1,0 +1,34 @@
+1) Join 2 Strings, store it in a variable and then display the result
+ package assign;
+
+public class Assign3 {
+	String name;
+	String Name;
+	public static void main(String[] args) {
+	
+		Assign3 demo = new Assign3();
+		demo.name="Raju";
+		demo.Name=" Welcome";
+		System.out.print(demo.name);
+		System.out.print(demo.Name);
+		}
+
+}
+
+2) Access 2 static variables and perform multiplication operation
+  
+  package assign;
+
+public class Assign2 {
+	public static void multiplication(int a,int b) {
+		int c = a*b;
+ System.out.println("mul is :"+c);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+ Assign2.multiplication(30,40);
+
+	}
+
+}
