@@ -16,33 +16,18 @@ System.out.print(c);
 	}
 }
 2) Get boolean value as input from user and print the same in console.
-package ass3;
-
+package assign;
 import java.util.Scanner;
 
-public class TandFass {
+public class Ass3TorF {
 
 	public static void main(String[] args) {
-Scanner scan = new Scanner (System.in);
+		
+		Scanner scan = new Scanner (System.in);
+		System.out.print("Enter the boolean value(true/false) : ");
+			boolean a =scan.nextBoolean();
+		System.out.println("Boolean value is : " + a );
+		scan.close();
+		}
 
-System.out.print("Enter The Number:");
-int  a = scan.nextInt();
-
-System.out.print("Enter The Number:");
-int  b = scan.nextInt();
-//System.out.print(a);
-//System.out.print(b);
-
-boolean A  = true;
-boolean B = false;
-//System.out.println(A);
-//System.out.println(B);
-
-boolean C =a<b ;
-
-System.out.print("grater value:"+C);
-scan.close();
-}
-
-}
-
+	}
