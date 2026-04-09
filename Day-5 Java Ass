@@ -1,0 +1,31 @@
+1) Write a program to find whether the given number is even or odd.
+For eg: User inputs 8, the output should be "The number 8 is even"
+package assign;
+
+public class Ass4java {
+
+	public static void main(String[] args) {
+		
+		int a = 8;
+	 
+	      if (a%2==0) {
+				System.out.println("The number 8 is Even ");	
+				}  
+	      else {
+	      System.out.println("it is a Odd num");
+	      }
+	}
+}
+2) Write a program using For Loop to print from 101 to 110.
+package assign;
+
+public class Assforloop101110num {
+
+	public static void main(String[] args) {
+		
+		for(int i=101;i<=110;i++){
+			System.out.println(i);
+	}
+
+}
+}
