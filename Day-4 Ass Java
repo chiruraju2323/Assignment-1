@@ -1,0 +1,15 @@
+1) Write a program using Ternary Operator to print if given value is even or not
+
+package assign;
+
+public class tandfinterassig4 {
+
+	public static void main(String[] args) {
+		int a = 4;
+		System.out.println((a%2==0)?"Even":"Not");
+		int b =	5;
+		System.out.println((b%2==0)?"Even":"Not");	
+
+	}
+
+}
