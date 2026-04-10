@@ -1,0 +1,18 @@
+Write a program to print only numbers divisible by 5 using jumping stmt and looping stmt
+package assign;
+
+public class Jumpinstatass6 {
+
+	public static void main(String[] args) {
+		for (int k=1;k<=50;k++) { // for for looping  
+			 if(k%5!=0) {
+				 continue;//jumping Statement
+			 }
+			 else {
+				 
+				 System.out.println(k);
+	}
+
+}
+}
+}
