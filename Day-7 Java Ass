@@ -1,0 +1,28 @@
+1) Create a class Employee and define methods for Employee like getSalary() and getTodayTask().
+It should have properties (Attributes) Employee ID, Department, Role.
+Select appropriate datatype for properties (EmployeeID, Department,Role) Display the output.
+Answer:
+package assign;
+public class Employee {
+int Employee_ID = 1214;
+String Department = " ";
+String Role =" ";
+int Salary = 20000;
+String Task = "No Task is provided";
+	public void get_Salary() {
+		System.out.println("Salary of the Employee: "+Salary);
+	}
+	public void get_Today_Task() {
+		System.out.println("Task of the Day: "+ Task);
+	}
+		public static void main(String[] args) {
+		Employee Work = new Employee();
+		Work.Department ="Service Depatment";
+		Work.Role = "Manager";
+		System.out.println("Employee ID :"+Work.Employee_ID);
+		System.out.println("Department :"+Work.Department);
+		System.out.println("Role :"+Work.Role);
+		Work.get_Salary();
+		Work.get_Today_Task();
+		}
+}
