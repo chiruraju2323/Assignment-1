@@ -1,0 +1,79 @@
+1) Create Animal Class and also Create Cat Class, Cat should inherit Animal. Animal should have methods like walk(),sound(). By means of inheritance access the Animal methods from Cat class.
+
+package pratsoops;
+
+ class Animal {
+	void walk() {
+		System.out.println(" Animal Walks like:");
+	}
+	void sound() {
+		System.out.println("Animla Sounds like:");
+	}
+}
+public class Cat extends Animal { // extends Parent -> is to act or work on that parent
+	void name () {
+		System.out.println("Name from Cat class");
+	}
+	public static void main(String[] args) {
+	Animal kitty = new Animal();
+	kitty.walk();
+	kitty.sound();
+
+	}
+}
+2) Explain about Method Overloading and Method Overriding concept with example program
+Method Overloading: 
+•	Same method name but different parameters (type/number/order) in the same class; happens at compile time.
+•	Overloading improves readability.
+Program:
+package pratsoops;
+class Overload{
+void calculate (int a,int b) { //parameters
+	int e = a+b;
+	System.out.println("Add a & b :"+e);
+}
+void Loc (String world1,String word2) { //parameters
+	String g = world1+ word2;
+	System.out.println("Joining two Strings:"+g);
+ }
+}
+public class Overloadingoops {
+	public static void main(String[] args) {
+	Overload Val = new Overload();
+	Val.calculate(6,6);
+         Overload Location = new Overload();
+	Val.Loc(" I am From "," Kodungaiyur");
+
+	}
+
+}
+
+Method Overriding:
+•	A subclass provides a new version of a method already defined in its parent class with the same signature; happens at runtime.
+•	while overriding enables runtime behaviour changes.
+Program:
+package pratsoops;
+class Animal {
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+}
+
+class Cat extends Animal {
+    @Override
+    void sound() {
+        System.out.println("Cat sounds:");
+    }
+
+    public static void main(String[] args) {
+        Animal Cats = new Cat ();  // parent reference, child object
+        Cats.sound();             // calls Cat’s method
+    }
+}
+
+
+
+
+
+
+
