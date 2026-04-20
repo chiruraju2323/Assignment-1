@@ -1,0 +1,50 @@
+1) Create a List of 5 float values and using a for loop check for condition and print only the 2nd element
+
+package assign;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Collection_Loopass {
+	
+public static void main(String[] args) {
+		List<Float> li = new ArrayList<>();//li ->list name
+		li.add(25.5f);
+		li.add(20.9f);
+		li.add(40.2f);
+		li.add(30.7f);
+		li.add(37.5f);
+		
+		for (int i=0;i<li.size();i++) { // li.size -> total elements
+		//Condition;
+			if (i==1) {
+				System.out.println("Second Value  : "+li.get(i));
+		}	
+	  }
+	}
+  }
+
+2) Create a Set of characters with duplicate values. Print all the values but without duplicates in sorting order.
+
+package assign;
+
+import java.util.ArrayList;
+import java.util.TreeSet;
+import java.util.List;
+import java.util.Set;
+public class Collection_Setstat {
+public static void main(String[] args) {
+	
+List<Object> list = new ArrayList<>();
+list.add('A');
+list.add('N');
+list.add('S');
+list.add('C');
+list.add('B');
+list.add('A');//duplicate
+list.add('C');//duplicate
+System.out.println(" Original list :"+list);
+//Set<Type> Reference = new Set_implementation<>(duplicate);
+  Set<Object> set = new TreeSet<>(list);
+	System.out.println("Sort order :"+set);
+	}
+}
