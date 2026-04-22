@@ -41,7 +41,6 @@ public class Overloadingoops {
 	public static void main(String[] args) {
 	Overload Val = new Overload();
 	Val.calculate(6,6);
-         Overload Location = new Overload();
 	Val.Loc(" I am From "," Kodungaiyur");
 
 	}
