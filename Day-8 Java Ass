@@ -15,7 +15,7 @@ public class Cat extends Animal { // extends Parent -> is to act or work on that
 		System.out.println("Name from Cat class");
 	}
 	public static void main(String[] args) {
-	Animal kitty = new Animal();
+	Cat kitty = new Cat();
 	kitty.walk();
 	kitty.sound();
 
@@ -32,7 +32,7 @@ void calculate (int a,int b) { //parameters
 	int e = a+b;
 	System.out.println("Add a & b :"+e);
 }
-void Loc (String world1,String word2) { //parameters
+void calculate (String world1,String word2) { //parameters
 	String g = world1+ word2;
 	System.out.println("Joining two Strings:"+g);
  }
@@ -41,7 +41,7 @@ public class Overloadingoops {
 	public static void main(String[] args) {
 	Overload Val = new Overload();
 	Val.calculate(6,6);
-	Val.Loc(" I am From "," Kodungaiyur");
+	Val.calculate(" I am From "," Kodungaiyur");
 
 	}
 
