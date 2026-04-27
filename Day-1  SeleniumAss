@@ -1,0 +1,60 @@
+1) Why we cannot automate CAPTCHA using selenium?
+
+CAPTCHA is designed specifically to block automation, including tools like Selenium.
+CAPTCHA is made to check if a user is human
+Selenium is a bot tool, not a human
+CAPTCHA shows random images or text, so Selenium cannot understand them
+Websites also detect bots and block them
+
+2) Write a program to open Opera browser.
+
+package Ass_sele;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass1selenium {
+
+	public static void main(String[] args) throws InterruptedException { {
+		WebDriver driver = new ChromeDriver(); 
+		driver.get("https://www.opera.com");//method class 
+		Thread.sleep(2000);//20000ms=2sec
+		driver.close();
+		
+}
+}
+
+	}
+
+3) What is the difference between driver.quit() and driver.close()
+
+In Selenium:
+driver.close() → Closes only the current browser tab/window (close() = one tab)
+driver.quit() → Closes all browser windows and ends the WebDriver session completely ( quit() = entire browser + session ends)
+   
+  
+4) Explain about WebDriver driver = new ChromeDriver(). Why we assign the Object of chrome driver to webdriver reference? explain it in shortly
+
+In Selenium WebDriver:
+
+java
+WebDriver driver = new ChromeDriver();
+
+* WebDriver → interface (reference type)
+* ChromeDriver → class (actual implementation for Chrome browser)
+
+Why assign like this?
+* It follows polymorphism → you can change browser easily:
+
+  java
+  WebDriver driver = new FirefoxDriver();
+  
+* Code becomes flexible and reusable
+* You use common methods defined in WebDriver, not browser-specific code
+Short:
+Use 'WebDriver' reference to make code flexible; `ChromeDriver` provides the actual execution.
+
+
+
+
+
