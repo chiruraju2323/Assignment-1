@@ -11,13 +11,13 @@ Websites also detect bots and block them
 package Ass_sele;
 
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.OperaDriver;
 
 public class Ass1selenium {
 
 	public static void main(String[] args) throws InterruptedException { {
-		WebDriver driver = new ChromeDriver(); 
-		driver.get("https://www.opera.com");//method class 
+		WebDriver driver = new OperaDriver(); 
+		driver.get("https://www.amazon.in");//method class 
 		Thread.sleep(2000);//20000ms=2sec
 		driver.close();
 		
@@ -42,9 +42,6 @@ WebDriver driver = new ChromeDriver();
 
 * WebDriver → interface (reference type)
 * ChromeDriver → class (actual implementation for Chrome browser)
-
-Why assign like this?
-* It follows polymorphism → you can change browser easily:
 
   java
   WebDriver driver = new FirefoxDriver();
