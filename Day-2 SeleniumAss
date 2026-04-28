@@ -1,0 +1,33 @@
+1) Navigate to https://www.tutorialspoint.com/selenium/practice/text-box.php
+   Enter the details in text fields  and submit using selenium code.
+
+package Ass_sele;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.By;
+public class Ass2selenium {
+	public static void main(String[] args) throws InterruptedException {
+		String url =" https://www.tutorialspoint.com/selenium/practice/text-box.php";
+		WebDriver driver=new ChromeDriver();
+		driver.get(url);
+		//To find or locate a webelement
+		WebElement FullName=driver.findElement(By.id("fullname"));
+		//Type the username in textfield
+		FullName.sendKeys("Chiru");
+		WebElement Email=driver.findElement(By.id("email"));
+		//Type the username in textfield
+		Email.sendKeys("chiru2323@email.com");
+		WebElement Address=driver.findElement(By.id("address"));
+		//Type the username in textfield
+		Address.sendKeys("No;5/6 Seetharamnagar Ashok nagar Chennai");
+		WebElement passWord=driver.findElement(By.cssSelector("input#password"));
+		//Type the username in textfield
+		passWord.sendKeys("Passward");
+	    System.out.println(passWord.getAttribute("value"));
+	    WebElement Submit = driver.findElement(By.id("submit"));
+	        Submit.click();
+	        Thread.sleep(2000);
+			driver.close();
+   }
+ }
