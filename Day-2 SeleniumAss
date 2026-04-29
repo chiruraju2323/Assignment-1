@@ -4,6 +4,7 @@
 package Ass_sele;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.locators.RelativeLocator;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.By;
 public class Ass2selenium {
@@ -25,9 +26,10 @@ public class Ass2selenium {
 		//Type the username in textfield
 		passWord.sendKeys("Passward");
 	    System.out.println(passWord.getAttribute("value"));
-	    WebElement Submit = driver.findElement(By.id("submit"));
-	        Submit.click();
+	    WebElement Submit =driver.findElement(RelativeLocator.with(By.tagName("input")).below(passWord));
+	     Submit.click();
 	        Thread.sleep(2000);
 			driver.close();
    }
  }
+
