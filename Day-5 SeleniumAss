@@ -1,0 +1,28 @@
+1) Navigate to https://www.tutorialspoint.com/selenium/practice/register.php
+   Using Relative Locators techniques find the "Last Name :", "Register" button and "BacktoLogin" button
+
+package Ass_sele;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Ass5Selenium {
+
+	public static void main(String[] args) throws InterruptedException {
+		String url = "https://www.tutorialspoint.com/selenium/practice/selenium_automation_practice.php";
+		WebDriver driver = new ChromeDriver();
+		driver.get(url);
+		WebElement simple = driver.findElement(By.id("state"));
+		Select selectOption = new Select(simple);
+		selectOption.selectByVisibleText("Uttar Pradesh");
+		WebElement Simple = driver.findElement(By.id("city"));
+		driver.findElement(By.cssSelector("option[value='Lucknow']")).click();
+		Thread.sleep(2000);
+        driver.close();
+
+	}
+
+}
