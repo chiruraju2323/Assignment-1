@@ -1,0 +1,76 @@
+1) Get the text and print the alert popup message
+
+package Ass_sele;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass6alCls {
+	public static void main(String[] args)throws InterruptedException {
+		String url ="https://vinothqaacademy.com/alert-and-popup/";
+		WebDriver driver = new ChromeDriver(); 
+		driver.get(url);
+		driver.findElement(By.name("alertbox")).click();
+		Alert popup = driver.switchTo().alert(); //what is us of popup in this code 
+		System.out.println(popup.getText());
+		popup.accept();//to click "ok button in Alert popup
+		Thread.sleep(2000);
+		driver.close();
+
+	}
+
+}
+
+2)Click "OK" for simple alert. Click "Cancel" for Confirm alert 
+
+package Ass_sele;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass6alt2 {
+	public static void main(String[] args)throws InterruptedException{
+		String url ="https://vinothqaacademy.com/alert-and-popup/";
+		WebDriver driver = new ChromeDriver(); 
+		driver.get(url);
+		driver.findElement(By.name("confirmalertbox")).click();
+		Alert popup = driver.switchTo().alert();
+		System.out.println(popup.getText());
+    popup.dismiss();//to click "cancel button in Alert popup
+    Thread.sleep(2000);
+    driver.close();
+
+	}
+
+}
+
+3)Enter input in Prompt Alert
+
+package Ass_sele;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Ass6pop3 {
+	public static void main(String[] args)throws InterruptedException {
+		String url ="https://vinothqaacademy.com/alert-and-popup/";
+		WebDriver driver = new ChromeDriver(); 
+		driver.get(url);
+		driver.findElement(By.name("promptalertbox1234")).click();
+		Alert popup = driver.switchTo().alert();
+		popup.sendKeys("It's Ok");
+		popup.accept();//to click "ok button in Alert popup
+		String result =driver.findElement(By.id("demoone")).getText();
+		System.out.println(result);
+		Thread.sleep(2000);
+		driver.quit();
+
+	}
+
+}
