@@ -1,0 +1,30 @@
+1) Navigate to http://uitestingplayground.com/autowait
+   Click "Apply 5s" button given
+   Click the blue "Button" after the wait time
+
+package Ass_sele;
+
+import java.time.Duration;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Ass7WaiSelenium {
+	
+    public static void main(String[] args)throws InterruptedException {
+    String url ="http://uitestingplayground.com/autowait";
+		WebDriver driver = new ChromeDriver(); 
+		driver.get(url);
+		Actions mouseAction = new Actions (driver);
+		driver.findElement(By.id("applyButton5")).click();
+		WebDriverWait expWait = new WebDriverWait(driver,Duration.ofSeconds(10));
+		WebElement blueButton = expWait.until(ExpectedConditions.elementToBeClickable(By.id("target")));
+		blueButton.click();
+		System.out.println("");
+	   
+	 }
+}  
