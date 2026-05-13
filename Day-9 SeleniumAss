@@ -1,0 +1,53 @@
+1) Slider:
+        Navigate to https://www.tutorialspoint.com/selenium/practice/slider.php and move the slider to some pixel
+
+package Ass_sele;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Ass9fFrame {
+
+	public static void main(String[] args) throws InterruptedException {
+		String url ="https://www.tutorialspoint.com/selenium/practice/slider.php";
+        WebDriver driver = new ChromeDriver(); 
+        driver.get(url);
+        Thread.sleep(2000);
+        Actions MoveAction = new Actions (driver);
+        //WebElement slider=driver.findElement(By.id("ageInputId"));
+        WebElement slider=driver.findElement(By.cssSelector("#ageInputId"));
+        MoveAction.clickAndHold(slider)
+        .moveByOffset(100, 0)
+        .release() 
+        .perform();
+        
+	}
+
+}
+
+2) Frames:
+        Navigate to https://www.tutorialspoint.com/selenium/practice/frames.php and click "Selenium Tutorial" link inside the iframe1
+
+package Ass_sele;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+
+public class Ass9Frame {
+	public static void main(String[] args) throws InterruptedException {
+		String url ="https://www.tutorialspoint.com/selenium/practice/frames.php";
+        WebDriver driver = new ChromeDriver(); 
+        driver.get(url);
+        Thread.sleep(2000);
+        Actions ScrollAction = new Actions (driver);
+        ScrollAction.scrollByAmount( 0,800).perform();
+		driver.switchTo().frame(0);
+		driver.findElement(By.linkText("Selenium Tutorial")).click();  
+	}
+}
