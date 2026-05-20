@@ -1,0 +1,37 @@
+1) Write a TestNG program to run the flow as EmployeeRegister -> EmployeeLogin -> EmployeeTask->EmployeeSalary
+   Each method depends on the previous method and priority should be set as show in the order of flow.
+
+package AssTNG;
+
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Ass1Priority {
+	@BeforeTest
+	public void testSetup() {
+		System.out.println("Executes Before All Test");
+	}
+	@Test(priority=3,dependsOnMethods= {"EmployeeLogin"})
+	public void  EmployeeTask() {
+		System.out.println(" Employee Task");	
+	}
+	@Test(priority=4,dependsOnMethods= {"EmployeeTask"})
+	public void EmployeeSalary() {
+		System.out.println("Employee Salary");
+	}
+	@Test(priority=1)
+	public void EmployeeRegister() {
+		System.out.println("Employee Register");
+    }
+	@Test(priority=2,dependsOnMethods= {"EmployeeRegister"})
+	public void  EmployeeLogin() {
+		System.out.println(" Employee Login");
+	}
+	@AfterTest
+	public void tearDown() {
+		System.out.println("Executes after all test");
+	}
+	
+}
+
