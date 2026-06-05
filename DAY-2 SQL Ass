@@ -1,0 +1,43 @@
+Create a table Bank which should contains columns like Cust id, Cust name, Bank Balance, active status. Insert some data into that table.
+Update the active status to 'Inactive' who ever has Bank Balance below 500.
+Delete the customer details who ever has bank balance as 0 and active status as 'Inactive'.
+
+create Database Assig;
+show databases;
+USE Assig;
+
+# Create Table
+CREATE TABLE Bank1 (
+    cust_id INT PRIMARY KEY,
+    cust_name VARCHAR(50),
+    bank_balance DECIMAL(10,2),
+    active_status VARCHAR(10)
+);
+
+# Insert Data
+INSERT INTO Bank1 (cust_id, cust_name, bank_balance, active_status)
+VALUES
+(101, 'Raju', 1000.00, 'Active'),
+(102, 'Ramya', 400.00, 'Active'),
+(103, 'Divya', 0.00, 'Active'),
+(104, 'Kumar', 300.00, 'Active'),
+(105, 'Priya', 750.00, 'Active');
+
+# View Data
+SELECT * FROM Bank1;
+
+# Update active status to Inactive for balance below 500
+UPDATE Bank1
+SET active_status = 'Inactive'
+WHERE bank_balance < 500;
+
+# View Updated Data
+SELECT * FROM Bank1;
+
+# Delete customers whose balance is 0 and status is Inactive
+DELETE FROM Bank1
+WHERE bank_balance = 0
+AND active_status = 'Inactive';
+
+# View Final Data
+SELECT * FROM Bank1;
