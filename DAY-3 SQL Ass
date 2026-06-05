@@ -1,0 +1,27 @@
+1) Create a table shopping and insert values for different products.
+   Print the products with highest and lowest price using aggregate functions
+
+show databases ;
+use Assig;
+create table Shopping(
+ product_id int auto_increment primary key,
+    product_name VARCHAR(50),
+    price float
+);
+
+# Insert Values
+INSERT INTO Shopping (product_id, product_name, price)
+VALUES
+(1, 'Laptop', 55000.00),
+(2, 'Mobile', 25000.00),
+(3, 'Headphones', 2000.00),
+(4, 'Smart Watch', 5000.00),
+(5, 'Keyboard', 1000.00);
+
+SELECT * FROM Shopping;
+
+select max(price) as high_price From Shopping;
+select min(price) as low_price From Shopping;
+
+SELECT * FROM Shopping WHERE price = (select max(price) from Shopping);
+SELECT * FROM Shopping WHERE price = (select min(price) from Shopping);
