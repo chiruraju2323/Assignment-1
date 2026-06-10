@@ -1,0 +1,26 @@
+  1)Create a table for students which should contain the following columns
+    id, name, subject,mark,course
+    Write subquery which should return student details whose mark should be grater than average.
+  2) Write a multi row subquery which should contain students with marks > 50
+show databases;
+use assig;
+create table students (
+	std_id int,
+    std_name varchar(20) not null,
+    subject_name varchar(20) ,
+    sub_mark float,
+    course varchar(20) 
+);
+insert into students 
+values(1,'Raju','Maths',95.2,'Mech'),
+(2,'Ramya','Maths',85.2,'Ece'),
+(3,'Raju','Science',82.2,'EEE'),
+(4,'Ram','Maths',45.2,'Ece'),
+(5,'Ramya','Science',95.2,'Cse');
+select avg(sub_mark)from students ;
+#avg sal=16250
+# single row subquery
+select  * from students
+# multi row subquery 
+where sub_mark>(select avg(sub_mark)from students);
+select  * from students where sub_mark>50; 
