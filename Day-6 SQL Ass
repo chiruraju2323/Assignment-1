@@ -1,0 +1,64 @@
+1) Create 2 tables shopping and order.
+   shopping should have columns like product_name,product_id,price
+   Order should have columns like product_id,order_status,shipping_detail
+   Join (Left,Right,Inner and Outer Join) this 2 tables based on product_id and display the result.
+
+use assig;
+CREATE TABLE shopping_Web (
+    product_id INT PRIMARY KEY,
+    product_name VARCHAR(50),
+    price DECIMAL(10,2)
+);
+
+CREATE TABLE orders (
+    product_id INT,
+    order_status VARCHAR(50),
+    shipping_detail VARCHAR(100)
+);
+
+INSERT INTO shopping_Web VALUES
+(101, 'Laptop', 75000.00),
+(102, 'Mobile', 25000.00),
+(103, 'Headphones', 2000.00),
+(104, 'Keyboard', 1500.00);
+
+INSERT INTO orders VALUES
+(101, 'Shipped', 'Chennai'),
+(102, 'Processing', 'Bangalore'),
+(105, 'Delivered', 'Hyderabad');
+
+# INNER JOIN
+SELECT s.product_id, s.product_name, s.price,
+       o.order_status, o.shipping_detail
+FROM shopping s
+INNER JOIN orders o
+ON s.product_id = o.product_id;
+
+# LEFT JOIN
+SELECT s.product_id, s.product_name, s.price,
+       o.order_status, o.shipping_detail
+FROM shopping s
+LEFT JOIN orders o
+ON s.product_id = o.product_id;
+
+# RIGHT JOIN
+SELECT s.product_id, s.product_name, s.price,
+       o.order_status, o.shipping_detail
+FROM shopping s
+RIGHT JOIN orders o
+ON s.product_id = o.product_id;
+
+# FULL OUTER JOIN 
+SELECT s.product_id, s.product_name, s.price,
+       o.order_status, o.shipping_detail
+FROM shopping s
+LEFT JOIN orders o
+ON s.product_id = o.product_id
+
+UNION
+
+SELECT s.product_id, s.product_name, s.price,
+       o.order_status, o.shipping_detail
+FROM shopping s
+RIGHT JOIN orders o
+ON s.product_id = o.product_id;
