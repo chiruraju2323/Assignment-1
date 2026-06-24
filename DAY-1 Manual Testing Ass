@@ -1,0 +1,39 @@
+1) Difference between SDLC and STLC process
+
+SDLC (Software Development Life Cycle)- Focuses on developing software.
+- Starts from requirement gathering and ends with maintenance.
+- Performed by Business Analysts, Developers, Architects, etc.
+- Goal is to build the product.
+- Phases: Requirement Analysis -> Design -> Development -> Testing -> Deployment ->Maintenance.
+
+STLC (Software Testing Life Cycle)- Focuses on testing software.- Starts from requirement analysis and ends with test closure.
+- Performed by Testers and QA Engineers.
+- Goal is to verify and validate the product.
+- Phases: Requirement Analysis -> Test Planning -> Test Case Development -> Environment Setup -> Test Execution -> Defect Reporting -> Test Closure.
+
+2) Who will do Unit Testing and What is the importance of Unit Testing? Explain about Quality Control
+
+Unit Testing is performed by Developers.
+  Importance of Unit Testing ;
+- Finds defects at an early stage.
+- Reduces debugging time.
+- Improves code quality.
+- Makes code maintenance easier.
+- Increases developer confidence.
+- Reduces overall testing cost.
+- Ensures each function works correctly before integration.
+
+Quality Control (QC)
+
+-Quality Control (QC) is the process of identifying defects in a product and ensuring that the product
+meets quality standards.
+-QC Activities:- Unit Testing- Integration Testing- System Testing- Regression Testing- User Acceptance Testing (UAT)
+
+QA vs QC
+
+QA:
+- Prevents defects- Process-oriented- Improves processes- Proactive approach.
+QC:
+- Finds defects- Product-oriented- Focuses on testing the product- Reactive approac.
+
+
