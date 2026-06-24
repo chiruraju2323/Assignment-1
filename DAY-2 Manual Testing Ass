@@ -1,0 +1,76 @@
+1) What is UAT? Who will do the testing and what is the purpose of testing?
+
+User Acceptance Testing (UAT) is the final phase of software testing in which actual users, clients,
+or customers test the application to verify that it meets their business requirements and
+expectations.
+
+Performs UAT:
+• Customers
+• Clients
+• Business users
+• End users
+
+Purpose of UAT:
+• To ensure the software satisfies business needs.
+• To verify that all requirements are implemented correctly.
+• To confirm that the application is ready for deployment.
+• To gain approval from the client before release.
+
+Example: 
+  In an online shopping application, users verify whether they can search products, add
+items to the cart, make payments, and receive order confirmations successfully.
+
+2) What is the difference between Functional and Non functional testing ? 
+
+Functional Testing checks what the system does and validates application features and functions
+based on business requirements.
+Examples: Login, Registration, Search, Payment Processing.
+
+Non-Functional Testing checks how the system performs and validates quality attributes such as
+performance, security, reliability, and usability.
+Examples: Load Testing, Performance Testing, Security Testing, Usability Testing
+
+3) Load testing will come under functional or non functional testing? And why it is coming under that category?
+
+Load Testing is a type of Non-Functional Testing.
+It evaluates how the application behaves when a large number of users access it simultaneously. It
+measures response time, system stability, server performance, and the application's ability to
+handle user load.
+Example: Testing an e-commerce website with 10,000 users logging in at the same time.
+
+4) What is Exploratory Testing and when we will do this testing ?
+
+Exploratory Testing is a testing approach where the tester explores the application, learns its
+behavior, and performs testing simultaneously without predefined test cases.
+
+ performed:
+• When requirements are incomplete or unclear.
+• When documentation is limited.
+• When quick testing is required.
+• To discover unexpected defects.
+• During the early stages of testing.
+
+Advantages:
+• Finds hidden defects.
+• Improves understanding of the application.
+• Useful for newly developed features.
+
+5) What is Black box Testing and how it differs from White box testing ?
+
+Black Box Testing is a testing method where the tester verifies the functionality of the application
+without knowing the internal code or program logic.
+Features:
+• Focuses on inputs and outputs.
+• No programming knowledge required.
+• Usually performed by testers.
+
+White Box Testing is a testing method where the tester examines the internal code, logic,
+conditions, and program structure.
+Features:
+• Requires programming knowledge.
+• Usually performed by developers.
+• Focuses on code coverage and logic validation.
+
+Key Difference:
+Black Box Testing focuses on functionality, whereas White Box Testing focuses on internal code
+structure and logic.
