@@ -1,0 +1,124 @@
+1) What are the Advantages and Disadvantages of White Box Testing?
+
+Advantages of White Box Testing :
+
+Here are the Advantages of White Box Testing:
+
+Thorough Testing: 
+White box testing is thorough as the entire code and structures are tested.
+Code Optimization: 
+It results in the optimization of code removing errors and helps in removing extra lines of code.
+Early Detection of Defects:
+It can start at an earlier stage as it doesn't require any interface as in the case of black box testing.
+Integration with SDLC: 
+White box testing can be easily started in Software Development Life Cycle.
+Detection of Complex Defects: 
+Testers can identify defects that cannot be detected through other testing 
+techniques.
+Comprehensive Test Cases: 
+Testers can create more comprehensive and effective test cases that cover all code paths.
+
+Disadvantages of White Box Testing :
+
+Here are the Disadvantages of White Box Testing:
+
+Programming Knowledge and Source Code Access: 
+Testers need to have programming knowledge and access to the source code to perform tests.
+Overemphasis on Internal Workings:
+Testers may focus too much on the internal workings of the software and may miss external issues.
+Bias in Testing: Testers may have a biased view of the software since they are familiar with its internal 
+workings.
+Test Case Overhead:
+Redesigning code and rewriting code needs test cases to be written again.
+Dependency on Tester Expertise:
+Testers are required to have in-depth knowledge of the code and programming language as opposed to black-box testing.
+Inability to Detect Missing Functionalities: 
+Missing functionalities cannot be detected as the code that exists is tested.
+
+2) What is Statement Coverage and Path Coverage?
+
+ Statement Coverage and Path Coverage
+
+ 1. Statement Coverage
+
+Definition:
+Statement Coverage is a white-box testing technique that checks whether every executable statement in the program has been executed at least once during testing. Its main objective is to ensure that all lines of code are tested.
+
+Example:
+
+text
+if (a > b)
+    max = a;
+else
+    max = b;
+print(max);
+
+
+To achieve 100% statement coverage, the test cases should execute both the **if** and **else** statements at least once.
+
+Advantages:
+
+* Ensures all statements are executed.
+* Helps identify unused or missing code.
+* Simple and easy to measure.
+
+Disadvantages:
+
+* Does not guarantee that all decision paths are tested.
+* May miss logical errors in conditions.
+
+
+
+ 2. Path Coverage
+
+**Definition:**
+Path Coverage is a white-box testing technique that ensures every possible execution path in a program is tested at least once. It is more comprehensive than statement coverage because it tests different combinations of decisions and conditions.
+
+Example:
+
+text
+if (a > b)
+    print("A");
+else
+    print("B");
+
+print("Done");
+
+
+For complete path coverage:
+
+* Test Case 1: `a > b` (True path)
+* Test Case 2: `a ≤ b` (False path)
+
+Both execution paths are tested.
+
+Advantages:
+
+* Tests all possible execution paths.
+* Detects logical and branching errors.
+* Provides better test coverage than statement coverage.
+
+Disadvantages:
+
+* Difficult to achieve for large programs with many paths.
+* Requires more test cases and time.
+
+
+
+ Difference Between Statement Coverage and Path Coverage
+
+| Statement Coverage                | Path Coverage                                       |
+| --------------------------------- | --------------------------------------------------- |
+| Tests every executable statement. | Tests every possible execution path.                |
+| Focuses on code execution.        | Focuses on all execution paths through the program. |
+| Requires fewer test cases.        | Requires more test cases.                           |
+| Easier to achieve.                | More difficult to achieve.                          |
+| May miss some logical errors.     | Better at detecting logical and branching errors.   |
+
+ Conclusion
+
+Statement Coverage ensures that every statement in the program is executed at least once, while Path Coverage ensures that every possible execution path is tested. Path Coverage provides more thorough testing but requires more effort and test cases.
+
+
+
+
