@@ -1,0 +1,25 @@
+1) Explain in detail about Agile Methodology
+
+Agile Methodology:
+          Agile is not a specific framework, but a philosophy governed by the Agile Manifesto (which prioritizes individuals/interactions, working software, customer collaboration, and responding to change).
+• How it Works: 
+Projects are broken down into small, incremental cycles called 
+• iterations.
+Pros: Highly adaptable; fast value delivery; continuous user feedback.
+Cons: Can lead to "scope creep" if not managed; requires high customer 
+involvement; less predictable final cost/timeline.
+
+2) Explain about Monitoring Activity
+
+Progress Tracking:
+          Continuously track the progress of testing activities against the planned schedule and milestones.
+• Metrics Collection:
+Gather and analyze relevant test metrics, such as test case execution status, defect discovery rate, 
+defect density, and test coverage.
+• Status Reporting:
+Periodically report on the status of testing to stakeholders, highlighting progress, issues, and risks.
+• Performance Measurement:
+Monitor the performance of the software under test, collecting data on response times, throughput, 
+and resource utilization.
+• Risk Monitoring:
+Continuously monitor identified risks and assess the emergence of new risks.
